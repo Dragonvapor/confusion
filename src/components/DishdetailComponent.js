@@ -45,7 +45,7 @@ class Dishdetail extends Component {
                 return (
                     <React.Fragment>
                         <li>{co.comment}</li><br />
-                        <li>-- {co.author}, {this.formatDate(co.date)}</li><br />
+                        <li>-- {co.author},{this.formatDate(co.date)}</li><br />
                     </React.Fragment>
                 )
 
@@ -63,7 +63,7 @@ class Dishdetail extends Component {
     }
 
     formatDate(date) {
-        const option = { year: 'numeric', month: 'short', day: 'numeric' };
+        const option = { year: 'numeric', month: 'short', day: '2-digit' };
         const date1 = new Date(date)
         const newdate = date1.toLocaleDateString("en-US", option)
         return newdate;
